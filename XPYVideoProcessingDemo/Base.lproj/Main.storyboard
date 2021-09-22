@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bNx-0u-Nmp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="Qvz-0D-5Ak">
+            <objects>
+                <tableViewController id="Zbf-pe-zcB" customClass="XPYHomepageTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tkc-yF-19g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="XPYHomepageCell" id="weO-z1-VTu">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="weO-z1-VTu" id="Mtg-21-Q77">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Zbf-pe-zcB" id="vP1-8Q-9FC"/>
+                            <outlet property="delegate" destination="Zbf-pe-zcB" id="J9W-1N-B4w"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="dVV-rq-hUU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yje-HZ-QFN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="50"/>
+        </scene>
+        <!--Videos Splicing View Controller-->
+        <scene sceneID="pYx-MC-eG2">
+            <objects>
+                <viewController storyboardIdentifier="XPYVideosSplicingController" id="z7s-FY-7DF" customClass="XPYVideosSplicingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lIF-Yy-syO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLi-Cc-Q73">
+                                <rect key="frame" x="157" y="94" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4DM-l7-3fx"/>
+                                    <constraint firstAttribute="height" constant="100" id="4eY-TJ-eUj"/>
+                                </constraints>
+                                <state key="normal" title="选择视频1"/>
+                                <connections>
+                                    <action selector="chooseVideoAction:" destination="z7s-FY-7DF" eventType="touchUpInside" id="ubS-K7-T6B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jn-LU-y5h">
+                                <rect key="frame" x="157" y="244" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7yU-lO-ZzY"/>
+                                    <constraint firstAttribute="width" constant="100" id="YPL-Mw-TU3"/>
+                                </constraints>
+                                <state key="normal" title="选择视频2"/>
+                                <connections>
+                                    <action selector="chooseVideoAction:" destination="z7s-FY-7DF" eventType="touchUpInside" id="Ijj-vz-OOo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vV-0V-XXX">
+                                <rect key="frame" x="157" y="762" width="100" height="50"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.78039215689999997" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="jaU-xg-74B"/>
+                                    <constraint firstAttribute="height" constant="50" id="pUH-Qo-zus"/>
+                                </constraints>
+                                <state key="normal" title="开始拼接">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAction:" destination="z7s-FY-7DF" eventType="touchUpInside" id="roi-vw-hEl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zOb-S5-qX4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BLi-Cc-Q73" firstAttribute="top" secondItem="zOb-S5-qX4" secondAttribute="top" constant="50" id="6Nk-ZX-4mj"/>
+                            <constraint firstItem="BLi-Cc-Q73" firstAttribute="centerX" secondItem="lIF-Yy-syO" secondAttribute="centerX" id="8bu-EG-zUo"/>
+                            <constraint firstItem="7vV-0V-XXX" firstAttribute="centerX" secondItem="lIF-Yy-syO" secondAttribute="centerX" id="JFy-C4-rMZ"/>
+                            <constraint firstItem="0jn-LU-y5h" firstAttribute="centerX" secondItem="lIF-Yy-syO" secondAttribute="centerX" id="OVs-MF-JLO"/>
+                            <constraint firstItem="0jn-LU-y5h" firstAttribute="top" secondItem="BLi-Cc-Q73" secondAttribute="bottom" constant="50" id="b0H-Jc-lgC"/>
+                            <constraint firstItem="zOb-S5-qX4" firstAttribute="bottom" secondItem="7vV-0V-XXX" secondAttribute="bottom" constant="50" id="foS-AP-cXT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseVideoButton1" destination="BLi-Cc-Q73" id="ZRa-rq-Lpj"/>
+                        <outlet property="chooseVideoButton2" destination="0jn-LU-y5h" id="ac9-B9-iyf"/>
+                        <outlet property="startButton" destination="7vV-0V-XXX" id="nnU-WP-qVb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3G-8m-85O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1675" y="50"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PPd-gM-Rty">
+            <objects>
+                <navigationController id="bNx-0u-Nmp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VaK-e1-puj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Zbf-pe-zcB" kind="relationship" relationship="rootViewController" id="U5j-Fk-ofE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxd-w3-jVr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="58"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
